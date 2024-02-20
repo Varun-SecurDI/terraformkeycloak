@@ -64,7 +64,7 @@ plan:
 
 apply:
 	@echo "$(GRE) INFO: Applying planned resources"
-	cd terraform/ \
+	cd terraform/ && \
 	@terraform init -reconfigure && \
 	terraform validate && \
 	terraform apply --auto-approve -var-file=terraform.tfvars
